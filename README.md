@@ -1,29 +1,27 @@
-Got it — the current `README.md` directory structure is rendering **in one line**, which breaks clarity.
+# 🧠 MLOps Major Assignment — California Housing Price Prediction 🏡
 
-Here’s a **refined, correctly formatted `README.md`** that uses code blocks and markdown lists to make the project structure readable and beautiful.
+> 🚀 Built with PyTorch, Scikit-Learn, Docker, and GitHub Actions CI
 
----
+This repository contains the implementation of a complete MLOps pipeline as part of the major exam assignment. The goal is to train, quantize, and deploy a simple machine learning model that predicts median house prices in California using the `fetch_california_housing` dataset.
 
-### ✅ Final Cleaned `README.md`
+✅ Highlights:
+- Linear Regression training and evaluation  
+- Manual model quantization (no PyTorch quant modules)  
+- Automated testing with `pytest`  
+- Dockerized deployment using `Dockerfile`  
+- CI/CD workflow with GitHub Actions  
+- Clean folder structure and unit-tested utilities  
 
-```markdown
-# 🧠 MLOps: Linear Regression with Quantization
+📅 **Submission Deadline:** August 2, 2025, 11:59 PM IST  
 
-[![CI Status](https://github.com/g24ai1055/mlops-major-assignment/actions/workflows/ci.yml/badge.svg)](https://github.com/g24ai1055/mlops-major-assignment/actions)
-
-A simple end-to-end MLOps project that:
-
-- Trains a Linear Regression model on the California Housing dataset
-- Performs manual quantization
-- Runs unit tests
-- Builds a Docker container and tests predictions inside it
-- Automates the pipeline via GitHub Actions
 
 ---
+
+
 
 ## 📁 Project Structure
 
-```
+```text
 
 mlops-major-assignment/
 ├── src/
@@ -47,6 +45,57 @@ mlops-major-assignment/
 ````
 
 ---
+
+
+---
+## 📸 Screenshots
+
+
+### 🔧 1. Module Installation (requirements.txt)
+![Train Output](screenshots/run-requirement.png)
+
+### 🔧 2. First Training Output (Non-Optimized) 
+![Train Output](screenshots/nopr.png )
+
+### 🔧 3. Optimised Training Output 
+![Train Output](screenshots/otr.png )
+
+### 🔧 4. Code Push
+![Train Output](screenshots/code-push.png)
+
+
+### 🔧 5. Docker Image Build
+![Train Output](screenshots/docker-build.png)
+
+
+
+### 🔧 6. Gihup Action Output ( 1 Failed )
+![Train Output](screenshots/1-failed-action.png)
+
+
+### 🔧 7. Gihup Action Output ( Fixed and Processing )
+![Train Output](screenshots/rerun-action.png)
+
+
+### 🔧 8. Gihup Action Output ( All Passed )
+![Train Output](screenshots/all-action-pass.png)
+
+
+```markdown
+# 🧠 MLOps: Linear Regression with Quantization
+
+[![CI Status](https://github.com/g24ai1055/mlops-major-assignment/actions/workflows/ci.yml/badge.svg)](https://github.com/g24ai1055/mlops-major-assignment/actions)
+
+A simple end-to-end MLOps project that:
+
+- Trains a Linear Regression model on the California Housing dataset
+- Performs manual quantization
+- Runs unit tests
+- Builds a Docker container and tests predictions inside it
+- Automates the pipeline via GitHub Actions
+
+---
+
 
 ## 🚀 How to Run
 
@@ -125,7 +174,6 @@ Actual: 0.46 | Predicted: 1.76
 ## 👨‍💻 Author
 
 * GitHub: ANIL KUAMR  IIT JODHPUR
-
 ---
 
 ## 📄 License
@@ -133,8 +181,4 @@ Actual: 0.46 | Predicted: 1.76
 This project is licensed under the **MIT License**.
 
 ```
-
 ---
-
-
-```
