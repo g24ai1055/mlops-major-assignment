@@ -1,6 +1,10 @@
-Here’s a clean, production-style **`README.md` template** tailored to your current MLOps assignment. It includes CI status, usage, local & Docker instructions, and more.
+Got it — the current `README.md` directory structure is rendering **in one line**, which breaks clarity.
+
+Here’s a **refined, correctly formatted `README.md`** that uses code blocks and markdown lists to make the project structure readable and beautiful.
 
 ---
+
+### ✅ Final Cleaned `README.md`
 
 ```markdown
 # 🧠 MLOps: Linear Regression with Quantization
@@ -8,6 +12,7 @@ Here’s a clean, production-style **`README.md` template** tailored to your cur
 [![CI Status](https://github.com/g24ai1055/mlops-major-assignment/actions/workflows/ci.yml/badge.svg)](https://github.com/g24ai1055/mlops-major-assignment/actions)
 
 A simple end-to-end MLOps project that:
+
 - Trains a Linear Regression model on the California Housing dataset
 - Performs manual quantization
 - Runs unit tests
@@ -21,21 +26,22 @@ A simple end-to-end MLOps project that:
 ```
 
 mlops-major-assignment/
-│
 ├── src/
-│   ├── train.py               # Training and saving model
-│   ├── quantize.py            # Manual quantization logic
-│   ├── predict.py             # Predict using trained model
-│   ├── utils.py               # Utility functions
-│   ├── model.joblib           # Trained model
-│   └── quant\_params.joblib    # Quantized parameters
+│   ├── train.py              # Training and saving model
+│   ├── quantize.py           # Manual quantization logic
+│   ├── predict.py            # Predict using trained model
+│   ├── utils.py              # Utility functions
+│   ├── model.joblib          # Trained model (generated after training)
+│   └── quant\_params.joblib   # Quantized parameters (generated)
 │
 ├── tests/
-│   └── test\_utils.py          # Unit tests for utils
+│   └── test\_utils.py         # Unit tests for utilities
 │
-├── Dockerfile
-├── requirements.txt
-├── .github/workflows/ci.yml   # GitHub Actions workflow
+├── .github/workflows/
+│   └── ci.yml                # GitHub Actions CI workflow
+│
+├── Dockerfile                # Docker build script
+├── requirements.txt          # Python dependencies
 └── README.md
 
 ````
@@ -44,23 +50,23 @@ mlops-major-assignment/
 
 ## 🚀 How to Run
 
-### 🔧 Locally
+### 💻 Locally
 
 ```bash
-# Create and activate venv
+# Create and activate virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Train model
+# Train the model
 python src/train.py
 
-# Quantize parameters
+# Apply quantization
 python src/quantize.py
 
-# Predict from saved model
+# Run prediction
 python src/predict.py
 ````
 
@@ -72,28 +78,38 @@ python src/predict.py
 # Build Docker image
 docker build -t mlops-lr .
 
-# Run container and trigger prediction
+# Run prediction in container
 docker run --rm mlops-lr
 ```
 
 ---
 
-## 🔁 GitHub Actions CI/CD
+## ⚙️ GitHub Actions Pipeline
 
-| Stage            | Description                                 |
-| ---------------- | ------------------------------------------- |
-| ✅ Unit Tests     | Runs `pytest` on `tests/`                   |
-| ✅ Model Training | Trains Linear Regression                    |
-| ✅ Quantization   | Applies manual quantization                 |
-| ✅ Docker Test    | Builds and runs prediction inside container |
+This project uses GitHub Actions to automate:
 
-Workflow automatically runs **on every push to `main`**.
+* ✅ Unit Tests via `pytest`
+* ✅ Model Training & Saving
+* ✅ Parameter Quantization
+* ✅ Docker Build & Prediction Test
+
+> Automatically runs on every push to `main`.
 
 ---
 
-## 📊 Sample Output
+## 🧪 Run Tests
+
+```bash
+pytest tests/
+```
+
+---
+
+## 📝 Sample Output
 
 ```
+📥 Loading California Housing dataset...
+🏋️‍♂️ Training Linear Regression model...
 ✅ R² Score: 0.5758
 📉 MSE Loss: 0.5559
 💾 Model saved to src/model.joblib
@@ -106,42 +122,19 @@ Actual: 0.46 | Predicted: 1.76
 
 ---
 
-## 📚 Requirements
+## 👨‍💻 Author
 
-* Python 3.9+
-* scikit-learn
-* numpy
-* joblib
-* pytest
-* Docker (optional for containerized testing)
-
----
-
-## 🧪 Run Tests
-
-```bash
-pytest tests/
-```
-
----
-
-## 🧑‍💻 Author
-
-* 🧾 [@g24ai1055](https://github.com/g24ai1055)
+* GitHub: ANIL KUAMR  IIT JODHPUR
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ```
 
 ---
 
-Would you like me to:
-- ✅ Auto-generate this into your repo as `README.md`?
-- 📦 Or help you push the Docker image to DockerHub/GitHub Container Registry?
 
-Let me know what you’d like to do next!
 ```
